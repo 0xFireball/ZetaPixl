@@ -66,29 +66,4 @@ namespace ZetaPhase.ZetaPixl
 			return colordata;
 		}
 	}
-	public class Base64
-	{
-		public static string _Base64Encode(string plainText)
-        {
-            byte[] plainTextBytes = System.Text.Encoding.UTF8.GetBytes(plainText);
-            return System.Convert.ToBase64String(plainTextBytes);
-        }
-
-        public static string _Base64Decode(string base64EncodedData)
-        {
-            byte[] base64EncodedBytes = System.Convert.FromBase64String(base64EncodedData);
-            return System.Text.Encoding.UTF8.GetString(base64EncodedBytes);
-        }
-        public static string GetBase64FromFile(string path)
-        {
-            Byte[] bytes = File.ReadAllBytes(path);
-            String file = Convert.ToBase64String(bytes);
-            return file;
-        }
-        public static void DumpBase64ToFile(string b64Str, string path)
-        {
-            Byte[] bytes = Convert.FromBase64String(b64Str);
-            File.WriteAllBytes(path, bytes);
-        }
-	}
 }

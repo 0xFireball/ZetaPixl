@@ -69,24 +69,5 @@ namespace ZetaPhase.ZetaPixl
     		int sB = MathMod((p+k*d));//calculate shifted int
     		return sB;
     	}
-    	public int[] GetKStream(int d)
-    	{
-    		//keystream - key
-    		//datastream - data to encrypt
-    		List<int> outputBytes = new List<int>();
-    		for (int i = 0; i < datastream.Length; i++)
-    		{
-    			outputBytes.Add(_deriveShiftedByte(datastream[i],keystream[i],d));
-    		}
-    		return outputBytes.ToArray();
-    	}
-    	public int[] Encrypt()
-    	{
-    		return GetKStream(1);
-    	}
-    	public int[] Decrypt()
-    	{
-    		return GetKStream(-1);
-    	}
     }
 }

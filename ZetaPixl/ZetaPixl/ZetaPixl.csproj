@@ -52,6 +52,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Base64.cs" />
     <Compile Include="BitmapParser.cs" />
     <Compile Include="ColorEncoder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
