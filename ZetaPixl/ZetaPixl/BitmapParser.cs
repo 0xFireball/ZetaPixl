@@ -109,30 +109,30 @@ namespace ZetaPhase.ZetaPixl
 		
 		public static string EncryptIntData(int[] intData, string password)
 		{
-			string b64 = __GetBase64FromIntData(intData);
+			string b64 = GetBase64FromIntData(intData);
 			string key = PowerAES.SHA512Hash(password);
 			string aes = PowerAES.Encrypt(b64, key);
-			string b64data = Base64._Base64Encode(aes);
+			string b64data = Base64.Base64Encode(aes);
 			return b64data;
 		}
 		public static int[] DecryptIntData(string encryptedIntData, string password)
 		{
-			string dB = Base64._Base64Decode(encryptedIntData);
+			string dB = Base64.Base64Decode(encryptedIntData);
 			string key = PowerAES.SHA512Hash(password);
 			string decryptedIntData = PowerAES.Decrypt(dB, key);
-			int[] nIntdata = __GetIntDataFromBase64(decryptedIntData);
+			int[] nIntdata = GetIntDataFromBase64(decryptedIntData);
 			return nIntdata;
 		}
 		
-		static string __GetBase64FromIntData(int[] imgIntData)
+		static string GetBase64FromIntData(int[] imgIntData)
 		{
 			string imS = string.Join(".",imgIntData);
-			string b64s = Base64._Base64Encode(imS);
+			string b64s = Base64.Base64Encode(imS);
 			return b64s;
 		}
-		static int[] __GetIntDataFromBase64(string b64ImgData)
+		static int[] GetIntDataFromBase64(string b64ImgData)
 		{
-			string uBs = Base64._Base64Decode(b64ImgData);
+			string uBs = Base64.Base64Decode(b64ImgData);
 			List<int> iD = new List<int>();
 			string[] sPx = uBs.Split(new char[]{'.'},StringSplitOptions.RemoveEmptyEntries);
 			foreach (string w in sPx)
@@ -159,6 +159,5 @@ namespace ZetaPhase.ZetaPixl
 			}
 			return new string(cData.ToArray());
 		}
-		
 	}
 }

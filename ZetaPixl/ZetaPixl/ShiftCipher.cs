@@ -64,7 +64,7 @@ namespace ZetaPhase.ZetaPixl
 		    x = (((x - x_min) % (x_max - x_min)) + (x_max - x_min)) % (x_max - x_min) + x_min;
 		    return x;
 		}
-    	public int _deriveShiftedByte(int p, int k, int d) //d is 1 to encrypt, 0 to decrypt
+    	public int DeriveShiftedByte(int p, int k, int d) //d is 1 to encrypt, 0 to decrypt
     	{
     		int sB = MathMod((p+k*d));//calculate shifted int
     		return sB;
