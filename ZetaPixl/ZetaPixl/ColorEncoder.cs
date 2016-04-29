@@ -6,7 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Collections.Generic;
 
-namespace OmniBean.ImageProcessing
+namespace ZetaPhase.ZetaPixl
 {
 	public class ColorEncoder
 	{

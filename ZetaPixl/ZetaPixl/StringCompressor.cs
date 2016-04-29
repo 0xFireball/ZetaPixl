@@ -7,7 +7,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Text;
 
-namespace OmniBean.ImageProcessing.Utilities
+namespace ZetaPhase.ZetaPixl.Utilities
 {
     public static class StringCompressor
     {

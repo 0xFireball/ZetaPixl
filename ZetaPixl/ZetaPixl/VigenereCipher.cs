@@ -1,6 +1,6 @@
 ﻿using System;
  
-namespace OmniBean.ImageProcessing
+namespace ZetaPhase.ZetaPixl
 {
 	//use d=1 for encrypting, use d=-1 for decrypting
     class VCipher

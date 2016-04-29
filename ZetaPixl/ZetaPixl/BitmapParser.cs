@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Collections.Generic;
 using OmniBean.PowerCrypt4;
 
-namespace OmniBean.ImageProcessing
+namespace ZetaPhase.ZetaPixl
 {
 	public class BitmapParser
 	{

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
  
-namespace OmniBean.ImageProcessing
+namespace ZetaPhase.ZetaPixl
 {
     public class ShiftUtils
     {
